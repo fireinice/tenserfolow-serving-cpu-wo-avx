@@ -21,5 +21,6 @@ ENV MODEL_NAME=model
 
 WORKDIR	   /app
 COPY tf_serving_entrypoint.sh .
+RUN chmod u+x ./tf_serving_entrypoint.sh
 
-ENTRYPOINT ["tf_serving_entrypoint.sh"]
+ENTRYPOINT ["./tf_serving_entrypoint.sh"]
